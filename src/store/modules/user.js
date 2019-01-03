@@ -1,8 +1,8 @@
-import axios from "axios";
+import axios from 'axios';
 
 export default {
   namespaced: true,
-  state: { name: "", lastName: "", loading: false },
+  state: { name: '', lastName: '', loading: false },
   mutations: {
     SET_NAME(state, { name, lastName }) {
       state.name = name;
@@ -10,23 +10,23 @@ export default {
     },
     SET_LOADING(state, loading) {
       state.loading = loading;
-    }
+    },
   },
   getters: {
     fullName(state) {
       return `${state.name} ${state.lastName}`;
-    }
+    },
   },
   actions: {
     init({ commit }, user) {
-      commit("SET_NAME", user);
+      commit('SET_NAME', user);
     },
     updateName({ commit, state }, name) {
-      commit("SET_LOADING", true);
-      axios.post("user/", { name }).finally(() => {
-        commit("SET_LOADING", false);
+      commit('SET_LOADING', true);
+      axios.post('user/', { name }).finally(() => {
+        commit('SET_LOADING', false);
       });
-      commit("SET_NAME", { name, lastName: state.lastName });
-    }
-  }
+      commit('SET_NAME', { name, lastName: state.lastName });
+    },
+  },
 };

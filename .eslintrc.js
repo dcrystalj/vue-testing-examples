@@ -1,21 +1,21 @@
 module.exports = {
   root: true,
   env: {
-    node: true
+    node: true,
   },
-  extends: ["plugin:vue/essential", "@vue/prettier"],
+  extends: ['plugin:vue/recommended', '@vue/prettier'],
   rules: {
     // allow paren-less arrow functions
-    "arrow-parens": 0,
+    'arrow-parens': 0,
     // allow async-await
-    "generator-star-spacing": 0,
+    'generator-star-spacing': 0,
     // allow debugger during development
-    "comma-dangle": ["error", "only-multiline"],
-    "space-before-function-paren": ["error", "never"],
-    "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
-    "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off"
+    'comma-dangle': ['error', 'only-multiline'],
+    'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
   },
   parserOptions: {
-    parser: "babel-eslint"
-  }
+    parser: 'babel-eslint',
+  },
 };

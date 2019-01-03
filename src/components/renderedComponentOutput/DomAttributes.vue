@@ -6,10 +6,9 @@
 
 <script>
 export default {
-  name: "Style",
-  props: ["url", "urlText"]
+  name: 'Style',
+  props: ['url', 'urlText'],
 };
 </script>
 
-<style>
-</style>
+<style></style>

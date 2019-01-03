@@ -6,16 +6,15 @@
 export default {
   data() {
     return {
-      date: new Date()
+      date: new Date(),
     };
   },
   mounted() {
     setTimeout(() => {
       this.date = new Date(this.date.getTime() + 1000);
     }, 1000);
-  }
+  },
 };
 </script>
 
-<style>
-</style>
+<style></style>

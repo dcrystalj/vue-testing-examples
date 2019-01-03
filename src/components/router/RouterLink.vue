@@ -1,15 +1,16 @@
 <template>
   <div>
-    <router-link v-if="name === 'home'" :to="{name}">link to {{ name }}</router-link>
-    <router-link v-else :to="{name: 'about'}">about</router-link>
+    <RouterLink v-if="name === 'home'" :to="{ name }"
+      >link to {{ name }}</RouterLink
+    >
+    <RouterLink v-else :to="{ name: 'about' }">about</RouterLink>
   </div>
 </template>
 
 <script>
 export default {
-  props: ["name"]
+  props: ['name'],
 };
 </script>
 
-<style>
-</style>
+<style></style>

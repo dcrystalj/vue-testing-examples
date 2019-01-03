@@ -1,20 +1,19 @@
 <template>
   <div class="attributes">
-    <TextContent v-for="i in numberOfRenderedComponents" :key="i"/>
+    <TextContent v-for="i in numberOfRenderedComponents" :key="i" />
   </div>
 </template>
 
 <script>
-import TextContent from "@/components/renderedComponentOutput/TextContent";
+import TextContent from '@/components/renderedComponentOutput/TextContent';
 
 export default {
-  name: "Style",
-  props: ["numberOfRenderedComponents"],
+  name: 'Style',
   components: {
-    TextContent
-  }
+    TextContent,
+  },
+  props: ['numberOfRenderedComponents'],
 };
 </script>
 
-<style>
-</style>
+<style></style>

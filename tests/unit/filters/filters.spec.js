@@ -1,7 +1,7 @@
-import { uppercase } from "@/filters/filters";
+import { uppercase } from '@/filters/filters';
 
-describe("filters.js", () => {
-  it("uppercase", () => {
-    expect(uppercase("abc")).toBe("ABC");
+describe('filters.js', () => {
+  it('uppercase', () => {
+    expect(uppercase('abc')).toBe('ABC');
   });
 });

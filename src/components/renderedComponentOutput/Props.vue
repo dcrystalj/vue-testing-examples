@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  props: ["inputString", "inputNumber"],
-  name: "Props"
+  name: 'Props',
+  props: ['inputString', 'inputNumber'],
 };
 </script>

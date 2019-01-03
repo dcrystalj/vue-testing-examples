@@ -1,16 +1,16 @@
-import { shallowMount } from "@vue/test-utils";
-import { logHelloOnCreateMixin } from "@/mixins/mixins";
+import { shallowMount } from '@vue/test-utils';
+import { logHelloOnCreateMixin } from '@/mixins/mixins';
 
-describe("Timer.vue", () => {
-  it("renders correct date", () => {
-    jest.spyOn(console, "log");
+describe('Timer.vue', () => {
+  it('renders correct date', () => {
+    jest.spyOn(console, 'log');
     const Component = {
       render() {},
-      mixins: [logHelloOnCreateMixin]
+      mixins: [logHelloOnCreateMixin],
     };
 
     shallowMount(Component);
 
-    expect(console.log).toBeCalledWith("hello");
+    expect(console.log).toBeCalledWith('hello');
   });
 });

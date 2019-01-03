@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input type="text" v-model="textInputData">
+    <input v-model="textInputData" type="text" />
     <button @click="onSubmit">submit</button>
   </div>
 </template>
@@ -9,16 +9,15 @@
 export default {
   data() {
     return {
-      textInputData: ""
+      textInputData: '',
     };
   },
   methods: {
     onSubmit() {
-      this.$emit("submitted", this.textInputData);
-    }
-  }
+      this.$emit('submitted', this.textInputData);
+    },
+  },
 };
 </script>
 
-<style>
-</style>
+<style></style>

@@ -8,7 +8,6 @@
     - classes
     - style
     - component props
-    - jsdom limitations
   - mocks
     - timer functions
     - public component methods
@@ -50,16 +49,36 @@
 
 # recomended test flow
 
-![testingFlow](assets/test_flow.png)
+<img src="assets/testing_pyramid.png" width="500px">
+<img src="assets/test_flow.png" height="600px">
 
-# test coverage
+# what to test?
 
-enable in `jest.config.js`
+- the input could be:
+  - Component props
+  - User actions (like a button click)
+  - Vue events
+  - Data in a Vuex store
+- Forms of output for a Vue component could be:
+  - rendered text
+    - Only test output that is dynamically generated
+    - Only test output that is part of the component contract
+  - Emitted events
+  - External function calls
+
+# jsdom limitations
+
+- layout (element positions)
+- navigation (submit form)
 
 # debugging
 
 - run `yarn test:unit:debug`
 - open `chrome://inspect` in chrome browser
+
+# test coverage
+
+enable in `jest.config.js`
 
 # dependencies
 
@@ -68,3 +87,10 @@ list of dependencies added after vue project is created with default settings:
 - vue cli-plugin-unit-jest -> https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-unit-jest
 - flush-promises -> https://www.npmjs.com/package/flush-promises
 - jest-date-mock -> https://www.npmjs.com/package/jest-date-mock
+
+# source
+
+- testing vue.js applications (Edd Yerburgh)
+- vue docs
+- vuex docs
+- jest docs

@@ -3,21 +3,20 @@
 </template>
 
 <script>
-import axios from "axios";
+import axios from 'axios';
 
 export default {
   data() {
     return {
-      message: ""
+      message: '',
     };
   },
   mounted() {
-    axios.post("/abcd").then(response => {
+    axios.post('/abcd').then(response => {
       this.message = response;
     });
-  }
+  },
 };
 </script>
 
-<style>
-</style>
+<style></style>
