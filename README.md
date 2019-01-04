@@ -91,6 +91,7 @@ list of dependencies added after vue project is created with default settings:
 # source
 
 - testing vue.js applications (Edd Yerburgh)
-- vue docs
-- vuex docs
+- vue test utils docs
+- vue testing docs
+- vuex testing docs
 - jest docs

@@ -1,4 +1,5 @@
 import { shallowMount } from '@vue/test-utils';
+import Classes from '@/components/renderedComponentOutput/Classes';
 import Props from '@/components/renderedComponentOutput/Props';
 
 describe('Props.vue', () => {
@@ -10,5 +11,6 @@ describe('Props.vue', () => {
       },
     });
     expect(wrapper.find('h1').text()).toStrictEqual('input 1');
+    expect(wrapper.find(Classes).props('inputNumber')).toBe(1);
   });
 });
