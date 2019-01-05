@@ -34,7 +34,7 @@
       - getters
       - actions
     - vuex in components
-  - server side rendering
+  - server side rendering (TODO)
   - factory
     - component factory
     - store factory
@@ -42,7 +42,7 @@
 - integration
   - not needed ?
 - snapshots
-- end 2 end tests
+- end 2 end tests (TODO)
   - for routes
   - for dynamic data
   - multiple browsers
@@ -71,14 +71,14 @@
 - layout (element positions)
 - navigation (submit form)
 
+# test coverage
+
+enable in `jest.config.js`
+
 # debugging
 
 - run `yarn test:unit:debug`
 - open `chrome://inspect` in chrome browser
-
-# test coverage
-
-enable in `jest.config.js`
 
 # dependencies
 
