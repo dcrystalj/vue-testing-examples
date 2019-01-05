@@ -88,7 +88,7 @@ list of dependencies added after vue project is created with default settings:
 - flush-promises -> https://www.npmjs.com/package/flush-promises
 - jest-date-mock -> https://www.npmjs.com/package/jest-date-mock
 
-# source
+# references
 
 - testing vue.js applications (Edd Yerburgh)
 - vue test utils docs
