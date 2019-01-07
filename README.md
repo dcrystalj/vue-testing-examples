@@ -27,6 +27,10 @@
     - input forms
     - control inputs
     - radio buttons
+  - factory
+    - component factory
+    - store factory
+    - wrapper factory
   - vuex
     - test as instance
     - or seperatly
@@ -35,12 +39,8 @@
       - actions
     - vuex in components
   - server side rendering (TODO)
-  - factory
-    - component factory
-    - store factory
-    - wrapper factory
 - integration
-  - not needed ?
+  - not needed
 - snapshots
 - end 2 end tests (TODO)
   - for routes
