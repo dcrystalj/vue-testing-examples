@@ -1,7 +1,7 @@
 import { shallowMount } from '@vue/test-utils';
 import { logHelloOnCreateMixin } from '@/mixins/mixins';
 
-describe('Timer.vue', () => {
+describe('mixins.js', () => {
   it('renders correct date', () => {
     jest.spyOn(console, 'log');
     const Component = {

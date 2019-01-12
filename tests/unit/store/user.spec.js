@@ -3,7 +3,6 @@ import { createLocalVue } from '@vue/test-utils';
 import cloneDeep from 'lodash.clonedeep';
 import Vuex from 'vuex';
 import axios from 'axios';
-
 import userModule from '@/store/modules/user';
 
 jest.mock('axios');
@@ -11,16 +10,17 @@ jest.mock('axios');
 describe('testing vuex store as instance', () => {
   // Mutations and actions are the inputs for a store
   // The output of a store is the store state or result of getters
+  let userStore;
 
   beforeEach(() => {
     const localVue = createLocalVue();
     localVue.use(Vuex);
+    userStore = cloneDeep(userModule);
   });
 
   it('updates name', async () => {
     expect.assertions(4);
 
-    let userStore = cloneDeep(userModule);
     axios.post.mockImplementation(() => Promise.resolve());
     userStore.state.name = 'foo';
     userStore.state.lastName = 'bar';
@@ -38,7 +38,6 @@ describe('testing vuex store as instance', () => {
   it('init', async () => {
     expect.assertions(2);
 
-    let userStore = cloneDeep(userModule);
     userStore.state.name = 'foo';
     userStore.state.lastName = 'bar';
     let store = new Vuex.Store({ modules: { user: userStore } });
@@ -75,16 +74,19 @@ describe('testing vuex parts separately', () => {
 
     const context = {
       commit: jest.fn(),
-      state: {},
+      state: {
+        name: 'foo',
+        lastName: 'bar',
+      },
     };
     axios.post.mockImplementation(() => Promise.resolve());
-    userModule.actions.updateName(context, 'foo');
+    userModule.actions.updateName(context, 'baz');
     await flushPromises();
 
     expect(context.commit).toHaveBeenNthCalledWith(1, 'SET_LOADING', true);
     expect(context.commit).toHaveBeenNthCalledWith(2, 'SET_NAME', {
-      name: 'foo',
-      lastName: undefined,
+      name: 'baz',
+      lastName: 'bar',
     });
     expect(context.commit).toHaveBeenNthCalledWith(3, 'SET_LOADING', false);
   });

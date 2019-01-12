@@ -3,7 +3,9 @@ import Timer from '@/components/mocks/Timer';
 import { advanceTo } from 'jest-date-mock';
 
 describe('Timer.vue', () => {
-  jest.useFakeTimers();
+  beforeEach(() => {
+    jest.useFakeTimers();
+  });
 
   it('renders correct date', () => {
     advanceTo(new Date(Date.UTC(2019, 0, 1, 0, 0, 1)));

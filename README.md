@@ -10,7 +10,6 @@
     - component props
   - mocks
     - timer functions
-    - public component methods
     - mock module dependencies
     - async code
   - events
@@ -28,7 +27,6 @@
     - control inputs
     - radio buttons
   - factory
-    - component factory
     - store factory
     - wrapper factory
   - vuex

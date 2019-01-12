@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>{{ inputString }} {{ inputNumber }}</h1>
-    <Classes :inputNumber="inputNumber"/>
+    <Classes :input-number="inputNumber" />
   </div>
 </template>
 
@@ -10,12 +10,12 @@ import Classes from '@/components/renderedComponentOutput/Classes';
 
 export default {
   name: 'Props',
+  components: {
+    Classes,
+  },
   props: {
     inputString: String,
     inputNumber: Number,
-  },
-  components: {
-    Classes,
   },
 };
 </script>
