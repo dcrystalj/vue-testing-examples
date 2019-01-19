@@ -12,7 +12,7 @@ describe('Events.vue', () => {
 
     wrapper.find('button').trigger('click');
 
-    expect(wrapper.emitted().onEmittedEvent).toStrictEqual([[1]]);
+    expect(wrapper.emitted().onEmittedEvent).toStrictEqual([[1]]); // emitted custom vue event
     expect(mock).toHaveBeenCalledWith(2);
   });
 });

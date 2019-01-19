@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils';
 import InputElement from '@/components/forms/InputElement';
-import { Input } from 'element-ui';
+import { Input, Button } from 'element-ui';
 
 describe('InputElement.vue', () => {
   it('emits onEmittedEvent event on click', () => {
@@ -8,7 +8,7 @@ describe('InputElement.vue', () => {
 
     // wrapper.find(Input).setValue("super-value"); // not possible
     wrapper.find(Input).vm.$emit('input', 'super-value');
-    wrapper.find('button').trigger('click');
+    wrapper.find(Button).vm.$emit('click');
 
     expect(wrapper.emitted().submitted).toStrictEqual([['super-value']]);
   });
@@ -16,6 +16,7 @@ describe('InputElement.vue', () => {
     const wrapper = shallowMount(InputElement, {
       stubs: {
         Input,
+        Button,
       },
     });
 
@@ -23,7 +24,7 @@ describe('InputElement.vue', () => {
       .find(Input)
       .find('input')
       .setValue('super-value');
-    wrapper.find('button').trigger('click');
+    wrapper.find(Button).trigger('click');
 
     expect(wrapper.emitted().submitted).toStrictEqual([['super-value']]);
   });

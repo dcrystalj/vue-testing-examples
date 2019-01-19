@@ -1,16 +1,17 @@
 <template>
   <div>
-    <Input v-model="textInputData" />
-    <button @click="onSubmit">submit</button>
+    <Input v-model="textInputData"/>
+    <Button @click="onSubmit">submit</Button>
   </div>
 </template>
 
 <script>
-import { Input } from 'element-ui';
+import { Input, Button } from 'element-ui';
 
 export default {
   components: {
     Input,
+    Button,
   },
   data() {
     return {
