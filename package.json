@@ -11,7 +11,7 @@
     "test:unit:debug": "export VUE_CLI_BABEL_TARGET_NODE=true && export VUE_CLI_BABEL_TRANSPILE_MODULES=true && node --inspect-brk ./node_modules/jest/bin/jest.js --no-cache --runInBand"
   },
   "dependencies": {
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "element-ui": "^2.4.11",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
